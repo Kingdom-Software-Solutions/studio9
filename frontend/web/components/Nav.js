@@ -3,7 +3,6 @@ import Link from 'next/link';
 export default function Nav(){
     return (
         <nav>
-            <Link href="about">About</Link>
             <Link href="/staff">Staff</Link>
             <Link href="/book">Book Sessions</Link>
             {/* might make the shop a separate repo or link to his shopify 👇 */}

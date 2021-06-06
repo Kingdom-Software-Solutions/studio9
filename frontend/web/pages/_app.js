@@ -1,5 +1,6 @@
 import NProgress from 'nprogress';
 import Router from 'next/router';
+import Page from '../components/Page'
 import '../styles/globals.css';
 // TODO: swap with my own css to customize progress bar
 import 'nprogress/nprogress.css';
@@ -11,7 +12,12 @@ Router.events.on('routeChangeComplete', () => NProgress.done())
 Router.events.on('routeChangeError', () => NProgress.done())
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  // wrap the app in top level component Page
+  return (
+    <Page>
+      <Component {...pageProps} />
+    </Page>
+  )
 }
 
 export default MyApp

@@ -1,4 +1,7 @@
+import Link from 'next/link';
+
 import Nav from "./Nav";
+import styled from 'styled-components';
 
 const Title = styled.h1`
     font-size: 4rem;
@@ -12,7 +15,7 @@ const Title = styled.h1`
         text-transform: uppercase;
         padding: 0.5rem 1rem;
     }
-`
+`;
 
 export default function Header(){
     return (
